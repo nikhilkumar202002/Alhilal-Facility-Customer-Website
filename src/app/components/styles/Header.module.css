@@ -1,0 +1,342 @@
+.topnav_contact_item{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-variant: var(--font-inter);
+    color: var(--text);
+    cursor: pointer;
+}
+.topnav_contact_item:hover{
+    text-decoration: underline;
+    transition: 400ms;
+}
+.topnav_contact_item span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;    
+    color: var(--primary);
+}
+.topnav_contact_list{
+    display: flex;
+    gap: 20px;
+}
+.topnav_buttons{
+    display: flex;
+    gap: 15px;
+}
+.topnav_button{
+    display: flex;
+    gap: 8px;
+}
+.topnav_button a{
+    font-size: 14px;
+    font-variant: var(--font-inter);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    text-decoration: underline;
+}
+.topnav_button a:hover{
+    color: var(--primary);
+    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: var(--primary);
+    text-underline-offset: 4px;
+}
+.topnav_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+    border-bottom: 1px solid var(--top-border);
+}
+.topnav_lang_dropdown select{
+    font-size: 14px;
+    font-variant: var(--font-inter);
+    border: 1px solid rgb(149, 149, 149);
+    background: transparent;
+    color: var(--text);
+    padding: 4px 8px;
+    outline: none;
+}
+
+/* --- Language Dropdown --- */
+.topnav_lang_dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.lang_dropdown_button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  padding: 6px 12px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang_dropdown_button:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+
+.chevron_open {
+  transform: rotate(180deg);
+}
+
+/* --- Dropdown Menu --- */
+.lang_dropdown_menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: #fff;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+  min-width: 120px;
+  z-index: 50;
+  animation: fadeIn 0.2s ease;
+}
+
+.lang_dropdown_menu li {
+  padding: 0;
+}
+
+.lang_dropdown_menu button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333 !important;
+  padding: 8px 12px;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.lang_dropdown_menu button:hover {
+  background: #f3f4f6;
+}
+
+.lang_dropdown_menu img {
+  border-radius: 4px;
+}
+
+/* Optional: smooth fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navbar */
+
+.navbar_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0px;
+    background-color: white;
+}
+.navbar_links{
+    display: flex;
+    gap: 20px;
+}
+.navbar_links a{
+    position: relative;
+    font-size: 17px;
+    font-variant: var(--font-roboto);
+    color: var(--text);
+    text-decoration: none;
+    transition: color 300ms;
+    font-weight: 400;
+}
+.navbar_links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 1.5px;
+  width: 0;
+  background-color: var(--primary); /* active/hover color */
+  transition: width 0.3s ease;
+}
+.navbar_links a:hover,
+.navbar_links a.active {
+  color: var(--primary); /* same as underline */
+}
+
+.navbar_links a:hover::after,
+.navbar_links a.active::after {
+  width: 100%;
+}
+
+/* navbar buttons */
+.navbar_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar_button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 17px;
+  text-decoration: none;
+  padding: 12px 25px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.4s ease, transform 0.4s ease;
+  overflow: hidden;
+}
+
+.navbar_button a span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Hover Animation */
+.navbar_button a:hover {
+  background-color: #b8904e;
+}
+
+.navbar_button a:hover span {
+  transform: translateX(8px); /* icon slides right */
+}
+
+.navbar_button a:hover {
+  transform: translateX(-4px); /* text moves slightly left */
+}
+
+/* --- Mobile Menu --- */
+.navbar_menu_icon {
+   display: none;
+  color: var(--primary);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar_menu_icon:hover {
+  transform: scale(1.1);
+}
+
+.mobile_menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  padding: 80px 30px 40px;
+  gap: 20px;
+  transition: right 0.4s ease;
+  z-index: 1000;
+}
+.mobile_menu_open {
+  right: 0;
+}
+.mobile_menu a {
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+/* Close button inside drawer */
+.mobile_close_btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--primary);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 1001;
+}
+
+.mobile_close_btn:hover {
+  transform: rotate(90deg);
+}
+.mobile_menu a:hover {
+  color: var(--primary);
+}
+
+.mobile_menu_open {
+  right: 0;
+}
+
+.mobile_cta {
+  margin-top: 40px;
+}
+
+.mobile_cta a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.mobile_cta a:hover {
+  background: #b8904e;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .navbar_links,
+  .navbar_buttons {
+    display: none;
+  }
+
+  .navbar_menu_icon {
+    display: block;
+  }
+  .topnav_contact_item p{
+    display: none;
+  }
+  .navbar_logo img{
+    width: 80px;
+    height: auto;
+  }
+}

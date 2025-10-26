@@ -1,2 +1,44 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+:root {
+  --primary: #C6A15B;
+  --text: black;
+  --top-border: #dcdcdc;
+}
+@layer base {
+  :root {
+    --font-body: var(--font-roboto);
+    --font-heading: var(--font-inter);
+  }
+
+  body {
+    font-family: var(--font-body), sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), sans-serif;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px; /* optional, adjust to your layout width */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 17px;
+  padding-right: 17px;
+    box-sizing: border-box;
+
+}
+
+/* Desktop spacing */
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
